@@ -288,7 +288,8 @@ public class CodeGenMojo extends AbstractMojo {
         }
 
         if (addCompileSourceRoot) {
-            project.addCompileSourceRoot(output.toString());
+            project.addCompileSourceRoot(output.toString()+"/src/main/java");
+            project.addTestCompileSourceRoot(output.toString()+"/src/test/java");
         }
     }
 }
